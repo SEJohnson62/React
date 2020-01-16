@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import data from './data.js';
 
-
+console.log(data.companies);
 function RenderCompanies( ) {
   return(
     <div className="Company">
@@ -10,7 +10,7 @@ function RenderCompanies( ) {
       {data.companies.map( company => {
         return(
           <li key={company.id}>
-            <strong>{company.name}</strong>
+            <strong>{company.name}</strong>, {company.state}
           </li>
         )
       })}
